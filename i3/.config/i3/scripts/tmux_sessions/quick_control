@@ -1,0 +1,44 @@
+#!/bin/bash
+
+name="quick_control"
+
+vpn_name="vpn"
+display_name="display"
+workspace_name="workspace"
+
+tmux new-session -d -s $name -n $vpn_name
+
+tmux new-window -t "$name:2" -n $display_name
+
+tmux new-window -t "$name:3" -n $workspace_name
+
+tmux send-keys -t $name:1 "alias up='sudo wg-quick up wg0'" C-m
+tmux send-keys -t $name:1 "alias down='sudo wg-quick down wg0'" C-m
+tmux send-keys -t $name:1 "alias show='sudo wg show wg0'" C-m
+
+tmux send-keys -t $name:1 "alias up1='sudo wg-quick up wg1'" C-m
+tmux send-keys -t $name:1 "alias down1='sudo wg-quick down wg1'" C-m
+tmux send-keys -t $name:1 "alias show1='sudo wg show wg1'" C-m
+
+tmux send-keys -t $name:2 "alias a='sudo brightnessctl set 1%'" C-m
+tmux send-keys -t $name:2 "alias s='sudo brightnessctl set 2%'" C-m
+tmux send-keys -t $name:2 "alias d='sudo brightnessctl set 3%'" C-m
+tmux send-keys -t $name:2 "alias f='sudo brightnessctl set 4%'" C-m
+tmux send-keys -t $name:2 "alias g='sudo brightnessctl set 5%'" C-m
+tmux send-keys -t $name:2 "alias h='sudo brightnessctl set 6%'" C-m
+tmux send-keys -t $name:2 "alias j='sudo brightnessctl set 7%'" C-m
+tmux send-keys -t $name:2 "alias k='sudo brightnessctl set 8%'" C-m
+tmux send-keys -t $name:2 "alias k='sudo brightnessctl set 9%'" C-m
+tmux send-keys -t $name:2 "alias q='sudo brightnessctl set 10%'" C-m
+tmux send-keys -t $name:2 "alias w='sudo brightnessctl set 20%'" C-m
+tmux send-keys -t $name:2 "alias e='sudo brightnessctl set 30%'" C-m
+tmux send-keys -t $name:2 "alias r='sudo brightnessctl set 40%'" C-m
+tmux send-keys -t $name:2 "alias t='sudo brightnessctl set 50%'" C-m
+tmux send-keys -t $name:2 "alias y='sudo brightnessctl set 60%'" C-m
+tmux send-keys -t $name:2 "alias u='sudo brightnessctl set 70%'" C-m
+tmux send-keys -t $name:2 "alias i='sudo brightnessctl set 80%'" C-m
+tmux send-keys -t $name:2 "alias o='sudo brightnessctl set 90%'" C-m
+tmux send-keys -t $name:2 "alias p='sudo brightnessctl set 100%'" C-m
+tmux send-keys -t $name:2 "alias set='sudo brightnessctl set'" C-m
+
+tmux send-keys -t $name:3 "alias reset='reset-wsp'" C-m

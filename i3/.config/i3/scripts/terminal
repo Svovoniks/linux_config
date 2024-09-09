@@ -1,0 +1,4 @@
+#!/bin/bash
+
+i3-sensible-terminal -e "tmux a -t terminal" &
+disown

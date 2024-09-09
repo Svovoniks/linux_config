@@ -1,0 +1,5 @@
+!/bin/bash
+
+tmux kill-server
+
+bash ~/.dotfiles/i3/.config/i3/scripts/workspace_starter

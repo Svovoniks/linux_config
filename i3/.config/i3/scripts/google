@@ -1,0 +1,6 @@
+#!/bin/bash
+
+google-chrome &
+disown
+
+sleep 0.5

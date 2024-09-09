@@ -1,0 +1,8 @@
+#!/bin/bash
+
+name="config"
+window_name="config"
+
+tmux new-session -d -s $name -n $window_name
+
+tmux send-keys -t $name:1 "cd /home/svovoniks/.dotfiles; vim ." C-m
