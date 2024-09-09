@@ -54,6 +54,14 @@ return {
                     vim.g.zig_fmt_autosave = 0
 
                 end,
+                ["pyright"] = function ()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.pyright.setup({
+                        root_dir = function ()
+                            return vim.fn.getcwd()
+                        end
+                    })
+                end,
                 ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.lua_ls.setup {
