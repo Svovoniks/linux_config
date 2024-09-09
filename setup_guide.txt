@@ -67,6 +67,10 @@ export NVM_DIR="$HOME/.nvm"
 
 "sudo apt install python3-pip"
 
+install node version manager and node 20 for lsp
+"curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash"
+"nvm install 20"
+
 install go from the browser
 
 Enable NaturalScrolling:
