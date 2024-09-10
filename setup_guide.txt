@@ -110,3 +110,7 @@ https://github.com/git-ecosystem/git-credential-manager/releases
 "sudo dpkg -i gcm-linux_amd64.2.5.1.deb"
 "git-credential-manager configure"
 "git config --global credential.credentialStore secretservice"
+
+sudo vim
+add to bashrc:
+"alias svim='sudo -E vim'"

@@ -246,5 +246,3 @@ exec --no-startup-id "bash ~/.config/i3/scripts/workspace_starter"
 
 bindsym Control+Shift+1 exec setxkbmap -layout us
 bindsym Control+Shift+2 exec setxkbmap -layout ru
-
-exec --no-startup-id alias svim='sudo -E vim'
