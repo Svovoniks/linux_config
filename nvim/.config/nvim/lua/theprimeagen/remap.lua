@@ -43,7 +43,7 @@ vim.keymap.set("n", "<C-s>", [[<Esc>:w<CR>]])
 vim.keymap.set("x", "<C-s>", [[<Esc>:w<CR>]])
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<F6>", [[<cmd>silent !GNOME_TERMINAL_SCREEN=""; i3-sensible-terminal -e 'cd %:h; exec bash' <CR>]])
+vim.keymap.set("n", "<F2>", [[:lua os.execute(string.format('GNOME_TERMINAL_SCREEN=""; i3-sensible-terminal -e "cd %s; exec bash" &', vim.fn.expand('%:h'))) <CR>]])
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
