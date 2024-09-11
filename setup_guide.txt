@@ -67,6 +67,9 @@ export NVM_DIR="$HOME/.nvm"
 
 "sudo apt install python3-pip"
 
+add to .bashrc
+"alias py='python3'"
+
 install node version manager and node 20 for lsp
 "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash"
 "nvm install 20"

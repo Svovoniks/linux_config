@@ -60,6 +60,9 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
+bindsym $sup+s focus left
+bindsym $sup+d focus right
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -243,6 +246,8 @@ exec --no-startup-id /usr/bin/compton --config ~/.dotfiles/i3/.config/i3/compton
 exec feh --bg-scale --zoom fill ~/Downloads/wallpaper.jpg
 
 exec --no-startup-id "bash ~/.config/i3/scripts/workspace_starter"
+exec --no-startup-id "setxkbmap -option caps:super"
+
 
 bindsym Control+Shift+1 exec setxkbmap -layout us
 bindsym Control+Shift+2 exec setxkbmap -layout ru
