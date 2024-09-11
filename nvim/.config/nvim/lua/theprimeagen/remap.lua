@@ -41,8 +41,7 @@ vim.keymap.set("n", "<C-s>", [[<Esc>:w<CR>]])
 vim.keymap.set("x", "<C-s>", [[<Esc>:w<CR>]])
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<F6>", "<cmd>silent !i3-sensible-terminal -e 'cd %:h; exec bash' &<CR>")
+vim.keymap.set("n", "<F6>", [[<cmd>silent !GNOME_TERMINAL_SCREEN=""; i3-sensible-terminal -e 'cd %:h; exec bash' <CR>]])
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
@@ -59,9 +58,6 @@ vim.keymap.set(
     "<leader>ee",
     "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
 )
-
-
-
 
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");

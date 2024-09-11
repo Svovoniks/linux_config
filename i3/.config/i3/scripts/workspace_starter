@@ -7,6 +7,7 @@ bash "/home/svovoniks/.config/i3/scripts/tmux_init"
 for i in ${!workspaces[*]}
 do
     i3-msg "workspace $((${i}+1))"
+    sleep 0.1
     bash "/home/svovoniks/.config/i3/scripts/${workspaces[${i}]}"
     sleep 0.5
 done
