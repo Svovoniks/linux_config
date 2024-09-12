@@ -118,5 +118,6 @@ sudo vim
 add to bashrc:
 "alias svim='sudo -E vim'"
 
+add to /etc/systemd/logind.conf
 HandleLidSwitch=poweroff
 HandleLidSwitchExternalPower=poweroff
