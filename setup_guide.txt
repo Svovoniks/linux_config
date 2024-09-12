@@ -117,3 +117,6 @@ https://github.com/git-ecosystem/git-credential-manager/releases
 sudo vim
 add to bashrc:
 "alias svim='sudo -E vim'"
+
+HandleLidSwitch=poweroff
+HandleLidSwitchExternalPower=poweroff
