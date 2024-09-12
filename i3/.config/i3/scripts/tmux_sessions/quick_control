@@ -4,7 +4,7 @@ name="quick_control"
 
 vpn_name="vpn"
 display_name="display"
-workspace_name="workspace"
+workspace_name="system"
 
 tmux new-session -d -s $name -n $vpn_name
 
@@ -41,4 +41,5 @@ tmux send-keys -t $name:2 "alias o='sudo brightnessctl set 90%'" C-m
 tmux send-keys -t $name:2 "alias p='sudo brightnessctl set 100%'" C-m
 tmux send-keys -t $name:2 "alias set='sudo brightnessctl set'" C-m
 
+tmux send-keys -t $name:3 "alias reset='reset-wsp'" C-m
 tmux send-keys -t $name:3 "alias reset='reset-wsp'" C-m
