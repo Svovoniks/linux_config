@@ -60,8 +60,8 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-bindsym $sup+s focus left
-bindsym $sup+d focus right
+bindsym $sup+a focus left
+bindsym $sup+s focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
