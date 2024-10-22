@@ -20,6 +20,10 @@ tmux send-keys -t $name:1 "alias up1='sudo wg-quick up wg1'" C-m
 tmux send-keys -t $name:1 "alias down1='sudo wg-quick down wg1'" C-m
 tmux send-keys -t $name:1 "alias show1='sudo wg show wg1'" C-m
 
+tmux send-keys -t $name:1 "alias up2='sudo wg-quick up wg2'" C-m
+tmux send-keys -t $name:1 "alias down2='sudo wg-quick down wg2'" C-m
+tmux send-keys -t $name:1 "alias show2='sudo wg show wg2'" C-m
+
 tmux send-keys -t $name:2 "alias a='sudo brightnessctl set 1%'" C-m
 tmux send-keys -t $name:2 "alias s='sudo brightnessctl set 2%'" C-m
 tmux send-keys -t $name:2 "alias d='sudo brightnessctl set 3%'" C-m

@@ -121,3 +121,6 @@ add to bashrc:
 add to /etc/systemd/logind.conf
 HandleLidSwitch=poweroff
 HandleLidSwitchExternalPower=poweroff
+
+add to /etc/default/keyboard
+XKBOPTIONS="caps:super"

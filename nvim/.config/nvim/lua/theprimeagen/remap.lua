@@ -31,6 +31,8 @@ vim.keymap.set("n", "<leader>P", [["+P]])
 vim.keymap.set("v", "<leader>p", [["+p]])
 vim.keymap.set("v", "<leader>P", [["+P]])
 
+vim.keymap.set("n", "<leader>pb", [[A{<CR>}<Esc>O]])
+
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled

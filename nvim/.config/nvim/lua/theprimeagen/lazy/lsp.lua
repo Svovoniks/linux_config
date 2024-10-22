@@ -11,6 +11,7 @@ return {
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
+        "nvim-lua/plenary.nvim",
     },
 
     config = function()
@@ -52,12 +53,24 @@ return {
                     })
                     vim.g.zig_fmt_parse_errors = 0
                     vim.g.zig_fmt_autosave = 0
-
                 end,
-                ["pyright"] = function ()
+                ["sqlls"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.sqlls.setup({
+                        root_dir = function()
+                            return vim.fn.getcwd()
+                        end
+                    })
+                end,
+                ["pyright"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.pyright.setup({
-                        root_dir = function ()
+                        settings = {
+                            python = {
+                                pythonPath = "/usr/bin/python3.12"
+                            },
+                        },
+                        root_dir = function()
                             return vim.fn.getcwd()
                         end
                     })
@@ -94,7 +107,7 @@ return {
                 ["<C-Space>"] = cmp.mapping.complete(),
             }),
             sources = cmp.config.sources({
-                { name = 'path'},
+                { name = 'path' },
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' }, -- For luasnip users.
             }, {
