@@ -61,7 +61,7 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 bindsym $sup+a focus left
-bindsym $sup+s focus right
+bindsym $sup+d focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -216,7 +216,6 @@ bar {
 # ------------------------------------------
 exec --no-startup-id nm-applet
 
-
 # FKeys
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -252,5 +251,5 @@ bindsym Control+Shift+1 exec setxkbmap -layout us
 bindsym Control+Shift+2 exec setxkbmap -layout ru
 
 ## Screenshots
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date).png"
+bindsym Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date).png"
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
