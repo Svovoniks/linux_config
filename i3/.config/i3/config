@@ -235,13 +235,13 @@ bindsym $mod+m move workspace to output left
 # Suspend
 #bindsym $mod+Shift+period exec systemctl suspend
 bindsym $mod+Shift+period exec shutdown now
-bindsym $mod+Shift+l exec i3lock
+bindsym $mod+Shift+l exec i3lock --image="/home/$USER/.dotfiles/wallpapers/wallpaper.png" -f
 
 
 
 # Workspace setup
 exec --no-startup-id /usr/bin/compton --config ~/.dotfiles/i3/.config/i3/compton.conf
-exec feh --bg-scale --zoom fill ~/Downloads/wallpaper.jpg
+exec feh --bg-scale --zoom fill ~/.dotfiles/wallpapers/wallpaper.jpg
 
 exec --no-startup-id "bash ~/.config/i3/scripts/workspace_starter"
 exec --no-startup-id "setxkbmap -option caps:super"
