@@ -126,3 +126,4 @@ add to /etc/default/keyboard
 XKBOPTIONS="caps:super"
 
 sudo apt install maim
+sudo apt install i3lock
