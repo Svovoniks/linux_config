@@ -7,7 +7,7 @@ set up os-prober:
 	"sudo mount /dev/nvme0n1p1 /mnt"
 	"sudo cp -ax /mnt/EFI/Microsoft /boot/efi/EFI"
 
-"sudo apt inatall i3"
+"sudo apt install i3"
 
 installed neovim with:
 """
