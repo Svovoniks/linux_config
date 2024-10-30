@@ -100,6 +100,11 @@ return {
                     require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
                 end,
             },
+
+            window = {
+                completion = cmp.config.window.bordered({border = "none"}),
+                documentation = cmp.config.window.bordered({border = "none"}),
+            },
             mapping = cmp.mapping.preset.insert({
                 ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
