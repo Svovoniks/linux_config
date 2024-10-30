@@ -251,6 +251,9 @@ exec --no-startup-id "setxkbmap -option caps:super"
 bindsym Control+Shift+1 exec setxkbmap -layout us
 bindsym Control+Shift+2 exec setxkbmap -layout ru
 
-## Screenshots
+# Trackpad toggle
+bindsym $sup+t exec /bin/bash ~/.dotfiles/i3/.config/i3/scripts/trackpad_toggle.sh
+
+## Screenshot
 bindsym Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date).png"
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
