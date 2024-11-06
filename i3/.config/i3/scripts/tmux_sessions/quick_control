@@ -46,4 +46,4 @@ tmux send-keys -t $name:2 "alias p='sudo brightnessctl set 100%'" C-m
 tmux send-keys -t $name:2 "alias set='sudo brightnessctl set'" C-m
 
 tmux send-keys -t $name:3 "alias reset='reset-wsp'" C-m
-tmux send-keys -t $name:3 "alias reset='reset-wsp'" C-m
+tmux send-keys -t $name:3 "alias net='nload'" C-m
