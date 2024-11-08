@@ -21,7 +21,12 @@ font pango:monospace 15px
 # Thanks Childz
 for_window [class="^.*"] border pixel 2
                           # class                 border  backgr. text    indicator child_border
-for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
+# for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
+# for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
+
+set $bcolor #4e807d
+
+client.focused #ffffff #ffffff #ffffff $bcolor $bcolor
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -209,6 +214,9 @@ bindsym $sup+r exec --no-startup-id /bin/bash ~/.dotfiles/bin/.local/scripts/tmu
 bar {
         status_command i3status
         tray_output primary
+        colors {
+            focused_workspace $bcolor $bcolor #ffffff
+        }
 }
 
 # ------------------------------------------
