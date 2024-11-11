@@ -127,3 +127,8 @@ XKBOPTIONS="caps:super"
 
 sudo apt install maim
 sudo apt install i3lock
+
+"""
+into .profile
+"""
+export GTK_THEME="Pop-dark"
