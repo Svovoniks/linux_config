@@ -102,8 +102,8 @@ return {
             },
 
             window = {
-                completion = cmp.config.window.bordered({border = "none"}),
-                documentation = cmp.config.window.bordered({border = "none"}),
+                completion = cmp.config.window.bordered({ border = "none" }),
+                documentation = cmp.config.window.bordered({ border = "none" }),
             },
             mapping = cmp.mapping.preset.insert({
                 ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),

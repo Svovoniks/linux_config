@@ -1,0 +1,12 @@
+------------------      Nvim      ------------------
+
+Buffers:
+list buffers - :ls
+open buffer - :b <buffer number>
+
+Highlight search:
+turn on highlight search - :set hls
+turn off highlight search - :set nohls
+
+Lsp:
+Uninstall Lsp - :LspUnistall <name>
