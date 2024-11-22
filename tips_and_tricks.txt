@@ -10,3 +10,20 @@ turn off highlight search - :set nohls
 
 Lsp:
 Uninstall Lsp - :LspUnistall <name>
+
+
+------------------      End      ------------------
+
+
+
+------------------      Linux      ------------------
+
+Kernel:
+get kernel version - uname -r
+
+Updates:
+check for updates - sudo apt list --upgradable
+update - sudo apt upgrade
+
+
+------------------      End      ------------------
