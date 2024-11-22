@@ -1,33 +1,33 @@
-------------------      Nvim      ------------------
+------------------      # nvim      ------------------
 
-Buffers:
+# buffers:
 list buffers - :ls
 open buffer - :b <buffer number>
 
-Highlight search:
+# highlight search:
 turn on highlight search - :set hls
 turn off highlight search - :set nohls
 
-Lsp:
-Uninstall Lsp - :LspUnistall <name>
+# lsp:
+uninstall lsp - :LspUnistall <name>
 
-Search:
+# search:
 make case insensetive - :set ic
 make case sensetive - :set noic
 
 
-------------------      End      ------------------
+------------------       End       ------------------
 
 
 
-------------------      Linux      ------------------
+------------------     # linux     ------------------
 
-Kernel:
+# kernel:
 get kernel version - uname -r
 
-Updates:
+# updates:
 check for updates - sudo apt list --upgradable
 update - sudo apt upgrade
 
 
-------------------      End      ------------------
+------------------       End       ------------------
