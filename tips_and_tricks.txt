@@ -11,6 +11,10 @@ turn off highlight search - :set nohls
 Lsp:
 Uninstall Lsp - :LspUnistall <name>
 
+Search:
+make case insensetive - :set ic
+make case sensetive - :set noic
+
 
 ------------------      End      ------------------
 
