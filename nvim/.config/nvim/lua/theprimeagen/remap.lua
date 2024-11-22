@@ -1,4 +1,3 @@
-
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", ":Ex<CR>")
 
@@ -23,7 +22,7 @@ end)
 vim.keymap.set("x", "<leader>r", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("n", "<leader>p", [["+p]])
@@ -31,9 +30,17 @@ vim.keymap.set("n", "<leader>P", [["+P]])
 vim.keymap.set("v", "<leader>p", [["+p]])
 vim.keymap.set("v", "<leader>P", [["+P]])
 
+-- make copy
+vim.keymap.set("n", "<leader>mc", function()
+    local current_file = vim.api.nvim_buf_get_name(0)
+    local file_name = vim.fn.input("New file name: ", current_file, "file")
+    vim.cmd("write " .. file_name)
+    vim.cmd("edit " .. file_name)
+end, { noremap = true, silent = true })
+
 vim.keymap.set("n", "<leader>pb", [[A{<CR>}<Esc>O]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -45,7 +52,8 @@ vim.keymap.set("n", "<C-s>", [[<Esc>:w<CR>]])
 vim.keymap.set("x", "<C-s>", [[<Esc>:w<CR>]])
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<F2>", [[:lua os.execute(string.format('GNOME_TERMINAL_SCREEN=""; i3-sensible-terminal -e "cd %s; exec bash" &', vim.fn.expand('%:h'))) <CR>]])
+vim.keymap.set("n", "<F2>",
+    [[:lua os.execute(string.format('GNOME_TERMINAL_SCREEN=""; i3-sensible-terminal -e "cd %s; exec bash" &', vim.fn.expand('%:h'))) <CR>]])
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
