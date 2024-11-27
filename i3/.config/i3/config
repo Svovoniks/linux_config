@@ -253,7 +253,7 @@ exec feh --bg-scale --zoom fill ~/.dotfiles/wallpapers/wallpaper.jpg
 
 exec --no-startup-id "bash ~/.config/i3/scripts/workspace_starter"
 exec --no-startup-id "setxkbmap -option caps:super"
-
+exec --no-startup-id "setxkbmap -layout 'us,ru' -option 'grp:ctrl_shift_toggle'"
 
 # Keyboad layouts
 bindsym Control+Shift+1 exec setxkbmap -layout us
