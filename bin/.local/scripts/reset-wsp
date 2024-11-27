@@ -1,5 +1,5 @@
-!/bin/bash
+#!/bin/bash
 
-tmux kill-server
+GNOME_TERMINAL_SCREEN=""
 
-bash ~/.dotfiles/i3/.config/i3/scripts/workspace_starter
+i3-sensible-terminal -e "reset-wsp-internal"

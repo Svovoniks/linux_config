@@ -5,3 +5,4 @@ name="terminal"
 tmux new-session -d -s $name -n $name
 
 tmux send-keys -t "$name:1" "cd" C-m
+

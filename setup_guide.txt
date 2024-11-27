@@ -132,3 +132,9 @@ sudo apt install i3lock
 into .profile
 """
 export GTK_THEME="Pop-dark"
+
+"""
+install frog (image -> text)
+"""
+sudo snap install frog
+

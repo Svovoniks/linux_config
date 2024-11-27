@@ -78,3 +78,14 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+local function toggle_hlsearch()
+    vim.o.hlsearch = not vim.o.hlsearch
+    if vim.o.hlsearch then
+        print("hls: ON")
+    else
+        print("hls: OFF")
+    end
+end
+
+vim.keymap.set("n", "<leader>hs", toggle_hlsearch, { desc = "Toggle hlsearch" })

@@ -7,10 +7,12 @@ display_name="display"
 workspace_name="system"
 
 tmux new-session -d -s $name -n $vpn_name
-
 tmux new-window -t "$name:2" -n $display_name
-
 tmux new-window -t "$name:3" -n $workspace_name
+
+tmux send-keys -t $name:1 "set +o history" C-m
+tmux send-keys -t $name:2 "set +o history" C-m
+tmux send-keys -t $name:3 "set +o history" C-m
 
 tmux send-keys -t $name:1 "alias up='sudo wg-quick up wg0'" C-m
 tmux send-keys -t $name:1 "alias down='sudo wg-quick down wg0'" C-m
@@ -47,3 +49,7 @@ tmux send-keys -t $name:2 "alias set='sudo brightnessctl set'" C-m
 
 tmux send-keys -t $name:3 "alias reset='reset-wsp'" C-m
 tmux send-keys -t $name:3 "alias net='nload'" C-m
+
+tmux send-keys -t $name:1 "clear" C-m
+tmux send-keys -t $name:2 "clear" C-m
+tmux send-keys -t $name:3 "clear" C-m

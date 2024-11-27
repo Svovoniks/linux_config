@@ -3,6 +3,7 @@
 # buffers:
 list buffers - :ls
 open buffer - :b <buffer number>
+close buffer - :bd <buffer number>
 
 # highlight search:
 turn on highlight search - :set hls

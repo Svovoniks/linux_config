@@ -5,7 +5,6 @@ main_window="main"
 terminal_window="terminal"
 
 tmux new-session -d -s $name -n $main_window
-
 tmux new-window -t "$name:2" -n $terminal_window
 
 tmux send-keys -t "$name:1" "cd ~/Desktop; vim ." C-m
