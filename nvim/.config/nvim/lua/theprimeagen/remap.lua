@@ -89,3 +89,4 @@ local function toggle_hlsearch()
 end
 
 vim.keymap.set("n", "<leader>hs", toggle_hlsearch, { desc = "Toggle hlsearch" })
+vim.keymap.set("n", "<leader>mm", [[`]], { desc = "Marker" })

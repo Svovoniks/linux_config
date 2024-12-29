@@ -138,3 +138,5 @@ install frog (image -> text)
 """
 sudo snap install frog
 
+install oh my zsh
+make zsh default shell

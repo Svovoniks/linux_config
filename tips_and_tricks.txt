@@ -9,6 +9,9 @@ close buffer - :bd <buffer number>
 turn on highlight search - :set hls
 turn off highlight search - :set nohls
 
+# text manipulation:
+replace with new line: use \r
+
 # lsp:
 uninstall lsp - :LspUnistall <name>
 

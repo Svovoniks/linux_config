@@ -9,6 +9,6 @@ tmux new-window -t "$name:2" -n $terminal_window
 
 tmux send-keys -t "$name:1" "cd ~/Desktop; vim ." C-m
 
-tmux send-keys -t "$name:2" "cd ~/Desktop" C-m
+tmux send-keys -t "$name:2" " cd ~/Desktop" C-m
 
 tmux select-window -t "$name:1"
