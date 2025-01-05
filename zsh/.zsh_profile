@@ -1,16 +1,10 @@
-export XDG_CONFIG_HOME=$HOME/.config
 VIM="nvim"
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 
-export CC="clang-12"
-export CXX="clang++-12"
-export PYTHONBREAKPOINT="pudb.set_trace"
-export GOPATH=$HOME/go
-export GIT_EDITOR=$VIM
-export N_PREFIX="$HOME/.local/n"
-export DOTFILES=$HOME/.dotfiles
+source ~/.zsh_aliases
+source ~/.zsh_exports
 
 addToPathFront() {
     export PATH="$1:$PATH"
@@ -28,26 +22,6 @@ ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[yellow]%}(%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}) %{$fg[yellow]%}%1{✗%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[yellow]%})"
-
-export PATH="/home/svovoniks/apps/Telegram:$PATH"
-export PATH="/home/svovoniks/apps:$PATH"
-
-export PATH="/home/svovoniks/.dotfiles/bin/.local/scripts:$PATH"
-
-export PATH="/home/svovoniks/development/flutter/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-. "$HOME/.cargo/env"
-
-export sys="/home/svovoniks/Desktop/sys/"
-export PATH="$sys:$PATH"
-export PATH="/home/svovoniks/go/bin/:$PATH"
-
-alias svim='sudo -E vim'
-alias py='python3.12'
-alias hist='vim /home/svovoniks/.zsh_history'
 
 # Where should I put you?
 bindkey -s ^f "tmux-sessionizer\n"

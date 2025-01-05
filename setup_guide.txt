@@ -22,7 +22,7 @@ sudo ln -s /squashfs-root/AppRun /usr/bin/vim
 nvim
 """
 
-installtelegram from the browser
+install telegram from the browser
 
 "sudo apt install zsh"
 
@@ -140,3 +140,7 @@ sudo snap install frog
 
 install oh my zsh
 make zsh default shell
+
+install ubuntu tweaks
+install regolith
+

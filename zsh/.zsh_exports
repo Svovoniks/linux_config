@@ -1,0 +1,23 @@
+export XDG_CONFIG_HOME=$HOME/.config
+
+export PATH="/home/svovoniks/apps/Telegram:$PATH"
+export PATH="/home/svovoniks/apps:$PATH"
+export PATH="/home/svovoniks/.local/scripts:$PATH"
+export PATH="/home/svovoniks/development/flutter/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. "$HOME/.cargo/env"
+
+export sys="/home/svovoniks/Desktop/sys/"
+export PATH="$sys:$PATH"
+export PATH="/home/svovoniks/go/bin/:$PATH"
+
+export CC="clang-12"
+export CXX="clang++-12"
+export PYTHONBREAKPOINT="pudb.set_trace"
+export GOPATH=$HOME/go
+export GIT_EDITOR=$VIM
+export N_PREFIX="$HOME/.local/n"
+export DOTFILES=$HOME/.dotfiles

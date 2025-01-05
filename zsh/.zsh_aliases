@@ -1,0 +1,3 @@
+alias svim='sudo -E vim'
+alias py='python3.12'
+alias hist='vim /home/svovoniks/.zsh_history'
