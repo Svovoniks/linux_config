@@ -33,5 +33,13 @@ get kernel version - uname -r
 check for updates - sudo apt list --upgradable
 update - sudo apt upgrade
 
+# tar:
+example: tar -czvf archive.tar.gz folder1 folder2 some_file
+flags:
+- c: compress
+- x: extract
+- z: use gzip
+- v: view progress
+- f: specify file name
 
 ------------------       End       ------------------
