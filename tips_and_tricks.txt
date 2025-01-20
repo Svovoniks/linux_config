@@ -50,9 +50,9 @@ flags:
 rename -n to DO NOTHING JUST SHOW WHAT WILL HAPPEND
 wihtout the -n will do the actual renaming
 example: rename -n 's/\[.*?\]|_//gs' ./*.mkv
-regex guide (it's kinda ass):
-s/ - substitue
-y/ - it exists idk what it does look up man page
+regex guide (it's kinda ass, maybe just write a python script):
+s/ - substite
+y/ - it exists, idk what it does, look up man page
 
 
 ------------------       End       ------------------
