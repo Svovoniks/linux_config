@@ -253,7 +253,7 @@ exec --no-startup-id /usr/bin/compton --config ~/.dotfiles/i3/.config/i3/compton
 
 exec --no-startup-id "bash ~/.config/i3/scripts/workspace_starter"
 exec --no-startup-id "setxkbmap -option caps:super"
-exec --no-startup-id "setxkbmap -layout 'us,ru' -option 'grp:alt_space_toggle'"
+# exec --no-startup-id "setxkbmap -layout 'us,ru' -option 'grp:alt_space_toggle'"
 exec --no-startup-id gsettings set org.gnome.desktop.background picture-uri file:///home/svovoniks/.config/wallpapers/wallpaper.jpg
 
 # keyboad layouts

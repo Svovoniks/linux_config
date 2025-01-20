@@ -101,3 +101,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh_profile
 
 # PROMPT="%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[green]%}%c%{$reset_color%}"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

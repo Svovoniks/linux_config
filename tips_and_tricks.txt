@@ -19,6 +19,9 @@ uninstall lsp - :LspUnistall <name>
 make case insensetive - :set ic
 make case sensetive - :set noic
 
+# help
+show all help files: <leader>vh
+
 
 ------------------       End       ------------------
 
@@ -39,7 +42,25 @@ flags:
 - c: compress
 - x: extract
 - z: use gzip
+- J: use xz
 - v: view progress
 - f: specify file name
+
+# rename
+rename -n to DO NOTHING JUST SHOW WHAT WILL HAPPEND
+wihtout the -n will do the actual renaming
+example: rename -n 's/\[.*?\]|_//gs' ./*.mkv
+regex guide (it's kinda ass):
+s/ - substitue
+y/ - it exists idk what it does look up man page
+
+
+------------------       End       ------------------
+
+
+
+------------------     # random    ------------------
+
+outline: remove it from ~/.config/autostart/
 
 ------------------       End       ------------------

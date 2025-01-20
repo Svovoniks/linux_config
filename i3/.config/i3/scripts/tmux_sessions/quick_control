@@ -2,13 +2,15 @@
 
 name="quick_control"
 
-vpn_name="vpn"
-display_name="display"
-workspace_name="system"
+vpn_str="vpn"
+display_str="display"
+system_str="system"
+network_str="network"
 
-tmux new-session -d -s $name -n $vpn_name
-tmux new-window -t "$name:2" -n $display_name
-tmux new-window -t "$name:3" -n $workspace_name
+tmux new-session -d -s $name -n $vpn_str
+tmux new-window -t "$name:2" -n $display_str
+tmux new-window -t "$name:3" -n $system_str
+tmux new-window -t "$name:4" -n $network_str
 
 tmux send-keys -t $name:1 " alias up='sudo wg-quick up wg0'" C-m
 tmux send-keys -t $name:1 " alias down='sudo wg-quick down wg0'" C-m
@@ -21,6 +23,8 @@ tmux send-keys -t $name:1 " alias show1='sudo wg show wg1'" C-m
 tmux send-keys -t $name:1 " alias up2='sudo wg-quick up wg2'" C-m
 tmux send-keys -t $name:1 " alias down2='sudo wg-quick down wg2'" C-m
 tmux send-keys -t $name:1 " alias show2='sudo wg show wg2'" C-m
+
+tmux send-keys -t $name:1 " alias go='py $HOME/.config/i3/scripts/tmux_sessions/scripts/run_vpn.py'" C-m
 
 tmux send-keys -t $name:2 " alias a='sudo brightnessctl set 1%'" C-m
 tmux send-keys -t $name:2 " alias s='sudo brightnessctl set 2%'" C-m
@@ -48,6 +52,10 @@ tmux send-keys -t $name:3 " alias net='nload'" C-m
 tmux send-keys -t $name:3 " alias upd='sudo apt list --upgradable'" C-m
 tmux send-keys -t $name:3 " alias doupd='sudo apt upgrade'" C-m
 
+tmux send-keys -t $name:4 " nload" C-m
+
 tmux send-keys -t $name:1 " clear" C-m
 tmux send-keys -t $name:2 " clear" C-m
 tmux send-keys -t $name:3 " clear" C-m
+
+tmux select-window -t $name:1

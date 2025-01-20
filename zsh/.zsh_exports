@@ -10,9 +10,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "$HOME/.cargo/env"
 
-export sys="/home/svovoniks/Desktop/sys/"
+export sys="/home/svovoniks/.config/svovo_sys/"
 export PATH="$sys:$PATH"
-export PATH="/home/svovoniks/go/bin/:$PATH"
+export PATH="/usr/local/go/bin/:$PATH"
+export PATH="/home/svovoniks/apps/android-studio/bin/:$PATH"
+export ANDROID_HOME="/home/svovoniks/apps/AndroidSdk/"
+# export JAVA_HOME="/home/svovoniks/apps/android-studio/jbr/"
+# export PATH="$JAVA_HOME/bin:$PATH"
 
 export CC="clang-12"
 export CXX="clang++-12"
@@ -21,3 +25,5 @@ export GOPATH=$HOME/go
 export GIT_EDITOR=$VIM
 export N_PREFIX="$HOME/.local/n"
 export DOTFILES=$HOME/.dotfiles
+
+export PATH="$HOME/apps/flutter/bin:$PATH"

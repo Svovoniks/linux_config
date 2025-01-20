@@ -12,6 +12,7 @@ return {
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
         "nvim-lua/plenary.nvim",
+        "nvim-treesitter/nvim-treesitter-context",
     },
 
     config = function()
@@ -22,6 +23,8 @@ return {
             {},
             vim.lsp.protocol.make_client_capabilities(),
             cmp_lsp.default_capabilities())
+
+        require("treesitter-context")
 
         require("fidget").setup({})
         require("mason").setup()
@@ -117,7 +120,10 @@ return {
                 { name = 'luasnip' }, -- For luasnip users.
             }, {
                 { name = 'buffer' },
-            })
+            }),
+            completion = {
+                completeopt = 'menu,menuone,noinsert',
+            }
         })
 
         vim.diagnostic.config({
