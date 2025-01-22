@@ -1,0 +1,1 @@
+zsh_term_with_command.sh sudo\ python3.12\ {util:display_brightness_picker.py}

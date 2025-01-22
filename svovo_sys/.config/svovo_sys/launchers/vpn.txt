@@ -1,0 +1,1 @@
+{cur_thr}python3.12 {util:run_vpn.py}

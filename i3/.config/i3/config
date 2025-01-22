@@ -125,7 +125,7 @@ bindsym $sup+m workspace 10
 bindsym $sup+Shift+j move container to workspace 1
 bindsym $sup+Shift+k move container to workspace 2
 bindsym $sup+Shift+l move container to workspace 3
-bindsym $sup+Shift+s move container to workspace 4
+bindsym $sup+Shift+semicolon move container to workspace 4
 bindsym $sup+Shift+u move container to workspace 5
 bindsym $sup+Shift+i move container to workspace 6
 bindsym $sup+Shift+o move container to workspace 7
@@ -207,7 +207,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $sup+r exec --no-startup-id /bin/bash ~/.dotfiles/bin/.local/scripts/tmux-sessionizer
+bindsym $sup+r exec --no-startup-id /bin/bash ~/.local/scripts/tmux-sessionizer
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -243,26 +243,25 @@ bindsym $mod+m move workspace to output left
 # Suspend
 #bindsym $mod+Shift+period exec systemctl suspend
 bindsym $mod+Shift+period exec shutdown now
-bindsym $mod+Shift+l exec i3lock --image="/home/$USER/.config/wallpapers/wallpaper.png" -f
+bindsym $mod+Shift+l exec i3lock --image="$HOME/.config/wallpapers/wallpaper.png" -f
 
 
 
 # Workspace setup
-exec --no-startup-id /usr/bin/compton --config ~/.dotfiles/i3/.config/i3/compton.conf
+exec --no-startup-id /usr/bin/compton --config ~/.config/i3/compton.conf
 # exec feh --bg-scale --zoom fill ~/.dotfiles/wallpapers/wallpaper.jpg
 
 exec --no-startup-id "bash ~/.config/i3/scripts/workspace_starter"
 exec --no-startup-id "setxkbmap -option caps:super"
-# exec --no-startup-id "setxkbmap -layout 'us,ru' -option 'grp:alt_space_toggle'"
 exec --no-startup-id gsettings set org.gnome.desktop.background picture-uri file:///home/svovoniks/.config/wallpapers/wallpaper.jpg
 
 # keyboad layouts
 bindsym control+shift+1 exec setxkbmap -layout us
 bindsym Control+Shift+2 exec setxkbmap -layout ru
 
-# Trackpad toggle
-bindsym $sup+t exec /bin/bash ~/.dotfiles/i3/.config/i3/scripts/trackpad_toggle.sh
+bindsym $sup+t exec /bin/bash ~/.local/scripts/trackpad_toggle.sh
+bindsym $sup+space exec  --no-startup-id "~/.local/scripts/language_switch.sh"
 
 ## Screenshot
-bindsym Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date).png"
+bindsym Print exec --no-startup-id maim --select "$HOME/Pictures/$(date).png"
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
