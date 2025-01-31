@@ -3,8 +3,10 @@ import time
 import configparser
 from os.path import join
 import subprocess
+import signal
 
 VPN_CONFIG_COUNT = 3
+STOP = False
 
 
 def turn_off(do_all=False) -> bool:
@@ -20,6 +22,8 @@ def turn_off(do_all=False) -> bool:
 
 def turn_on() -> bool:
     for i in range(VPN_CONFIG_COUNT):
+        if STOP:
+            return False
 
         try: subprocess.run(['sudo', 'wg-quick', 'down', f'wg{i}'], capture_output=True)
         except: pass
@@ -35,6 +39,8 @@ def turn_on() -> bool:
 
         print(f'started wg{i}')
         for _ in range(5):
+            if STOP:
+                break
             show_res = None
             try:
                 show_res = subprocess.run(['sudo', 'wg', 'show', f'wg{i}'], capture_output=True)
@@ -55,11 +61,21 @@ def turn_on() -> bool:
 
 def attempt(action) -> bool:
     for _ in range(5):
+        if STOP:
+            return False
+
         if action():
             return True
     return False
 
+
+def stop():
+    global STOP
+    STOP = True
+
 if __name__ == '__main__':
+    signal.signal(signal.SIGINT, lambda _, __: stop())
+
     if 'sys' not in os.environ:
         print('no sys in sight')
         exit(1)

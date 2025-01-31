@@ -14,9 +14,7 @@ addToPathFront $HOME/.local/scripts
 addToPathFront $HOME/.local/bin
 addToPathFront $HOME/go/bin
 
-PROMPT="%(?:%{$fg_bold[green]%}%1{ *>%}:%{$fg_bold[red]%}%1{ *>%}) %{$fg[green]%}%~%{$reset_color%}"
-PROMPT+=' $(git_prompt_info)'
-PROMPT+='> '
+PROMPT='%(?:%{$fg_bold[green]%} *>:%{$fg_bold[red]%} *>) %{$fg[green]%}%~%{$reset_color%} $(git_prompt_info)> '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[yellow]%}(%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "

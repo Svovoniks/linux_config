@@ -30,8 +30,8 @@ while True:
         subprocess.run(f"sudo brightnessctl set {map[ln]}%".split())
         continue
 
-    if re.fullmatch(r"set \d+", ln):
-        subprocess.run(f"sudo brightnessctl {ln}".split())
+    if re.fullmatch(r"\d+", ln):
+        subprocess.run(f"sudo brightnessctl set {ln}".split())
         continue
 
     print("WTF?")

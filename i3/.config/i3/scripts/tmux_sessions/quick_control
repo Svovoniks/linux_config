@@ -21,6 +21,8 @@ tmux send-keys -t $name:1 " alias down2='sudo wg-quick down wg2'" C-m
 tmux send-keys -t $name:1 " alias show2='sudo wg show wg2'" C-m
 
 # tmux send-keys -t $name:1 " alias go='sys vpn'" C-m
+#
+tmux send-keys -t $name:1 " alias sys='sys -f -s'" C-m
 
 tmux send-keys -t $name:1 " clear" C-m
 tmux send-keys -t $name:1 " sys -s -f" C-m
