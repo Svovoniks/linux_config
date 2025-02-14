@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# these windows will be created on startup
 workspaces=("main" "terminal" "google" "quick_control" "config")
 workspace_idxs=(1 2 3 4 5)
 

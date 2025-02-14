@@ -9,12 +9,10 @@ VPN_CONFIG_COUNT = 3
 STOP = False
 
 
-def turn_off(do_all=False) -> bool:
+def turn_off() -> bool:
     for i in range(VPN_CONFIG_COUNT):
         try:
-            res = subprocess.run(['sudo', 'wg-quick', 'down', f'wg{i}'], capture_output=True)
-            if 'is not' not in str(res.stdout) and not do_all:
-                return True
+            subprocess.run(['sudo', 'wg-quick', 'down', f'wg{i}'], capture_output=True)
         except:
             continue
 
@@ -54,8 +52,11 @@ def turn_on() -> bool:
             print(f'check failed')
             time.sleep(1)
 
-        print(f'stopped wg{i}')
-        subprocess.run(['sudo', 'wg-quick', 'down', f'wg{i}'], capture_output=True)
+        try:
+            subprocess.run(['sudo', 'wg-quick', 'down', f'wg{i}'], capture_output=True)
+            print(f'stopped wg{i}')
+        except:
+            print(f'failed to stop wg{i}')
 
     return False
 

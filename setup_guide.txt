@@ -144,7 +144,3 @@ make zsh default shell
 install ubuntu tweaks
 install regolith
 
-"""
-install mission center for nice process management
-"""
-flatpak install flathub io.missioncenter.MissionCenter

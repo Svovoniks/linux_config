@@ -1,0 +1,8 @@
+#!/bin/bash
+
+name="notes"
+main_window="notes"
+
+tmux new-session -d -s $name -n $main_window
+tmux send-keys -t "$name:1" "cd ~/Desktop/notes/; vim ." C-m
+tmux select-window -t "$name:1"

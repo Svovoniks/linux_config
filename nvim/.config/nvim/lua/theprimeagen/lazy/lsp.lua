@@ -13,6 +13,7 @@ return {
         "j-hui/fidget.nvim",
         "nvim-lua/plenary.nvim",
         "nvim-treesitter/nvim-treesitter-context",
+        "ranjithshegde/ccls.nvim",
     },
 
     config = function()
@@ -24,8 +25,20 @@ return {
             vim.lsp.protocol.make_client_capabilities(),
             cmp_lsp.default_capabilities())
 
+        local util = require "lspconfig.util"
+        local server_config = {
+            filetypes = { "c", "cpp", "objc", "objcpp", "opencl" },
+            root_dir = function(fname)
+                return util.root_pattern("compile_commands.json", "compile_flags.txt", ".git")(fname)
+                    or util.find_git_ancestor(fname)
+                    or vim.fn.getcwd()
+            end,
+            clang = {
+                extraArgs = { "--gcc-toolchain=/usr", "--driver-mode=g++" }
+            }
+        }
+        require("ccls").setup { lsp = { lspconfig = server_config } }
         require("treesitter-context")
-
         require("fidget").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
@@ -41,8 +54,7 @@ return {
                         capabilities = capabilities
                     }
                 end,
-
-                zls = function()
+                ['zls'] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.zls.setup({
                         root_dir = lspconfig.util.root_pattern(".git", "build.zig", "zls.json"),
@@ -60,6 +72,8 @@ return {
                 ["sqlls"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.sqlls.setup({
+                        capabilities = capabilities,
+                        filetypes = { 'sql' },
                         root_dir = function()
                             return vim.fn.getcwd()
                         end

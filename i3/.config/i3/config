@@ -101,7 +101,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-# bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -212,6 +212,12 @@ bindsym $sup+r exec --no-startup-id /bin/bash ~/.local/scripts/tmux-sessionizer
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        # disable scrolling through workspaces
+        bindsym button4 nop
+        bindsym button5 nop
+        bindsym button6 nop
+        bindsym button7 nop
+
         status_command i3status
         tray_output primary
         colors {
@@ -264,4 +270,5 @@ bindsym $sup+space exec  --no-startup-id "~/.local/scripts/language_switch.sh"
 
 ## Screenshot
 bindsym Print exec --no-startup-id maim --select "$HOME/Pictures/$(date).png"
+bindsym Ctrl+Print exec --no-startup-id maim "$HOME/Pictures/$(date).png"
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png

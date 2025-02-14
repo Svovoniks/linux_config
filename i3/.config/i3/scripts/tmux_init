@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sessions=("main" "config" "quick_control" "terminal")
+# these tmux sessions will be initialized on startup
+sessions=("main" "config" "quick_control" "terminal" "notes")
 
 for i in ${!sessions[*]}
 do

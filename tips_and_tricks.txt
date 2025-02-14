@@ -22,6 +22,10 @@ make case sensetive - :set noic
 # help
 show all help files: <leader>vh
 
+# cdo
+:vim /TODO/ **/*
+:cope
+:cdo s/TODO/FIXME/g | update
 
 ------------------       End       ------------------
 
@@ -60,6 +64,53 @@ apply to mutliple files with regex:
 # dmenu, .desktop
 to add app to dmenu create .deskop file in this location:
 ~/.local/share/applications
+
+# deb package
+dpkg -i package
+
+# screenshot
+ - Ctrl+Print: full screen to file
+ - Print: select to file
+ - Ctrl+Shift+Print: select area screenshot to clipboard
+
+# list files with size
+du -sh * | sort -hr
+
+# mount over ssh
+ - load into the kernel: sudo modprobe fuse
+ - mount the folder: sshfs maythux@192.168.xx.xx:/remote/dir ~/local/dir
+ - unmount the folder: fusermount -u ~/local/dir
+
+# systemd service
+example
+put this into /etc/systemd/system/<service>.service
+*****************************************************
+[Unit]
+Description=checks if nas is alive
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Environment=PYTHONPATH=/home/admin/svovo
+WorkingDirectory=/home/admin/nas
+Type=simple
+ExecStart=/home/admin/nas/run.sh
+
+[Install]
+WantedBy=multi-user.target
+*****************************************************
+template: sudo systemctl <word> <service>
+word options:
+ - start
+ - stop
+ - restart
+ - status
+ - enable (make it run on boot)
+
+
+# emoji
+ - Ctrl+. start entering emoji description
+ - Space to type the emoji
 
 ------------------       End       ------------------
 
