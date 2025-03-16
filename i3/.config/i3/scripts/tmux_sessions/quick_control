@@ -3,10 +3,10 @@
 name="quick_control"
 
 sys_str="sys"
-# display_str="display"
+display_str="display"
 
 tmux new-session -d -s $name -n $sys_str
-# tmux new-window -t "$name:2" -n $display_str
+tmux new-window -t "$name:2" -n $display_str
 
 tmux send-keys -t $name:1 " alias up='sudo wg-quick up wg0'" C-m
 tmux send-keys -t $name:1 " alias down='sudo wg-quick down wg0'" C-m
@@ -47,7 +47,7 @@ tmux send-keys -t $name:1 " sys -s -f" C-m
 # tmux send-keys -t $name:2 " alias o='sudo brightnessctl set 90%'" C-m
 # tmux send-keys -t $name:2 " alias p='sudo brightnessctl set 100%'" C-m
 # tmux send-keys -t $name:2 " alias set='sudo brightnessctl set'" C-m
-#
-# tmux send-keys -t $name:2 " clear" C-m
+
+tmux send-keys -t $name:2 " sys \"display(auto)\"" C-m
 
 tmux select-window -t $name:1

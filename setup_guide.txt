@@ -144,3 +144,6 @@ make zsh default shell
 install ubuntu tweaks
 install regolith
 
+
+install shellcheck
+sudo apt install shellcheck

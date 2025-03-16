@@ -92,6 +92,16 @@ return {
                         end
                     })
                 end,
+                ["bashls"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.bashls.setup({
+                        capabilities = capabilities,
+                        filetypes = { "sh" },
+                        root_dir = function()
+                            return vim.fn.getcwd()
+                        end,
+                    })
+                end,
                 ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.lua_ls.setup {

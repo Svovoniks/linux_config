@@ -27,6 +27,19 @@ show all help files: <leader>vh
 :cope
 :cdo s/TODO/FIXME/g | update
 
+# fighing double eyed kirby
+:%s/\(.*\)/bar\1/g
+
+# watch changes live
+use -f
+works with:
+ - journald
+ - tail
+ - maybe more...
+
+# nmap
+ - list all devices on the network: "nmap -sn 192.168.1.0/24"
+
 ------------------       End       ------------------
 
 
@@ -34,11 +47,11 @@ show all help files: <leader>vh
 ------------------     # linux     ------------------
 
 # kernel:
-get kernel version - uname -r
+get kernel version - "uname -r"
 
 # updates:
-check for updates - sudo apt list --upgradable
-update - sudo apt upgrade
+check for updates - "sudo apt list --upgradable"
+update - "sudo apt upgrade"
 
 # tar:
 example: tar -czvf archive.tar.gz folder1 folder2 some_file
@@ -51,7 +64,7 @@ flags:
 - f: specify file name
 
 # rename
-rename -n to DO NOTHING JUST SHOW WHAT WILL HAPPEND
+"rename -n" to DO NOTHING JUST SHOW WHAT WILL HAPPEND
 wihtout the -n will do the actual renaming
 example: rename -n 's/\[.*?\]|_//gs' ./*.mkv
 s/ - substite
@@ -69,15 +82,15 @@ to add app to dmenu create .deskop file in this location:
 dpkg -i package
 
 # screenshot
+ - Ctrl+Shift+Print: select area screenshot to clipboard
  - Ctrl+Print: full screen to file
  - Print: select to file
- - Ctrl+Shift+Print: select area screenshot to clipboard
 
 # list files with size
 du -sh * | sort -hr
 
 # mount over ssh
- - load into the kernel: sudo modprobe fuse
+ - load into the kernel: sudo modprobe fuse (or don't)
  - mount the folder: sshfs maythux@192.168.xx.xx:/remote/dir ~/local/dir
  - unmount the folder: fusermount -u ~/local/dir
 
@@ -112,8 +125,28 @@ word options:
  - Ctrl+. start entering emoji description
  - Space to type the emoji
 
+# background jobs/ctrl+z/kill
+ctrl+z suspends the process and moves it to the background
+actions:
+ - list all background jobs - "jobs -l"
+ - bring job back to foreground - "fg %<job number>"
+ - continue executing job in the background - "bg %<job number>"
+
+# grep
+ - use -v to exclude pattern
+
+# wc (word count)
+- wc -l will count lines in a file
+
 ------------------       End       ------------------
 
+
+------------------     # git       ------------------
+
+# cancel add
+git reset
+
+------------------       End       ------------------
 
 
 ------------------     # random    ------------------
@@ -121,3 +154,5 @@ word options:
 outline: remove it from ~/.config/autostart/
 
 ------------------       End       ------------------
+
+

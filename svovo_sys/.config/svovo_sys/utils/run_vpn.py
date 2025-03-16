@@ -16,7 +16,7 @@ def turn_off() -> bool:
         except:
             continue
 
-    return False
+    return True
 
 def turn_on() -> bool:
     for i in range(VPN_CONFIG_COUNT):
@@ -104,7 +104,7 @@ if __name__ == '__main__':
             config['vpn']['is_on'] = 'no'
         else:
             print("Couldn't turn off")
-            config['vpn']['is_on'] = 'yes'
+            config['vpn']['is_on'] = 'no'
 
 
     with open(config_file, 'w') as file:
