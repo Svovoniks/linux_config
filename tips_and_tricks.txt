@@ -138,6 +138,12 @@ actions:
 # wc (word count)
 - wc -l will count lines in a file
 
+# sort
+- use -V to sort like Python
+
+# find
+- example: find ./.. -name filename
+
 ------------------       End       ------------------
 
 

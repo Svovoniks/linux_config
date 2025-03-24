@@ -1,5 +1,9 @@
+alias vi='nvim'
+alias vim='nvim'
 alias svim='sudo -E vim'
 alias lvim='vim -u ~/.config/nvim/lua/theprimeagen/remap.lua'
+
 alias py='python3.12'
+
 alias hist='vim /home/svovoniks/.zsh_history'
 alias szls='du -sh * | sort -hr'

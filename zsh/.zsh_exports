@@ -1,22 +1,20 @@
 export XDG_CONFIG_HOME=$HOME/.config
 
-export PATH="/home/svovoniks/apps/Telegram:$PATH"
-export PATH="/home/svovoniks/apps:$PATH"
-export PATH="/home/svovoniks/.local/scripts:$PATH"
-export PATH="/home/svovoniks/development/flutter/bin:$PATH"
+export PATH="$HOME/apps/Telegram:$PATH"
+export PATH="$HOME/apps:$PATH"
+export PATH="$HOME/.local/scripts:$PATH"
+export PATH="$HOME/development/flutter/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "$HOME/.cargo/env"
 
-export sys="/home/svovoniks/.config/svovo_sys/"
+export sys="$HOME/.config/svovo_sys/"
 export PATH="$sys:$PATH"
 export PATH="/usr/local/go/bin/:$PATH"
-export PATH="/home/svovoniks/apps/android-studio/bin/:$PATH"
-export ANDROID_HOME="/home/svovoniks/apps/AndroidSdk/"
-# export JAVA_HOME="/home/svovoniks/apps/android-studio/jbr/"
-# export PATH="$JAVA_HOME/bin:$PATH"
+export PATH="$HOME/apps/android-studio/bin/:$PATH"
+export ANDROID_HOME="$HOME/apps/AndroidSdk/"
 
 export CC="clang-12"
 export CXX="clang++-12"
