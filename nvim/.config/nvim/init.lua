@@ -1,3 +1,4 @@
-require("theprimeagen")
+-- thank you ThePrimeagen!
 
-ColorMyPencils()
+require("svovoniks_nvim")
+

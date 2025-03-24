@@ -20,33 +20,10 @@ tmux send-keys -t $name:1 " alias up2='sudo wg-quick up wg2'" C-m
 tmux send-keys -t $name:1 " alias down2='sudo wg-quick down wg2'" C-m
 tmux send-keys -t $name:1 " alias show2='sudo wg show wg2'" C-m
 
-# tmux send-keys -t $name:1 " alias go='sys vpn'" C-m
-#
 tmux send-keys -t $name:1 " alias sys='sys -f -s'" C-m
 
 tmux send-keys -t $name:1 " clear" C-m
 tmux send-keys -t $name:1 " sys -s -f" C-m
-
-# tmux send-keys -t $name:2 " alias a='sudo brightnessctl set 1%'" C-m
-# tmux send-keys -t $name:2 " alias s='sudo brightnessctl set 2%'" C-m
-# tmux send-keys -t $name:2 " alias d='sudo brightnessctl set 3%'" C-m
-# tmux send-keys -t $name:2 " alias f='sudo brightnessctl set 4%'" C-m
-# tmux send-keys -t $name:2 " alias g='sudo brightnessctl set 5%'" C-m
-# tmux send-keys -t $name:2 " alias h='sudo brightnessctl set 6%'" C-m
-# tmux send-keys -t $name:2 " alias j='sudo brightnessctl set 7%'" C-m
-# tmux send-keys -t $name:2 " alias k='sudo brightnessctl set 8%'" C-m
-# tmux send-keys -t $name:2 " alias k='sudo brightnessctl set 9%'" C-m
-# tmux send-keys -t $name:2 " alias q='sudo brightnessctl set 10%'" C-m
-# tmux send-keys -t $name:2 " alias w='sudo brightnessctl set 20%'" C-m
-# tmux send-keys -t $name:2 " alias e='sudo brightnessctl set 30%'" C-m
-# tmux send-keys -t $name:2 " alias r='sudo brightnessctl set 40%'" C-m
-# tmux send-keys -t $name:2 " alias t='sudo brightnessctl set 50%'" C-m
-# tmux send-keys -t $name:2 " alias y='sudo brightnessctl set 60%'" C-m
-# tmux send-keys -t $name:2 " alias u='sudo brightnessctl set 70%'" C-m
-# tmux send-keys -t $name:2 " alias i='sudo brightnessctl set 80%'" C-m
-# tmux send-keys -t $name:2 " alias o='sudo brightnessctl set 90%'" C-m
-# tmux send-keys -t $name:2 " alias p='sudo brightnessctl set 100%'" C-m
-# tmux send-keys -t $name:2 " alias set='sudo brightnessctl set'" C-m
 
 tmux send-keys -t $name:2 " sys \"display(auto)\"" C-m
 

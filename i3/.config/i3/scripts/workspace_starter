@@ -4,19 +4,17 @@
 workspaces=("main" "terminal" "google" "quick_control" "config")
 workspace_idxs=(1 2 3 4 5)
 
-bash "/home/svovoniks/.config/i3/scripts/tmux_init"
+bash "$HOME/.config/i3/scripts/tmux_init"
 
 i3-msg "workspace wait..."
 sleep 0.1
 
-for i in ${!workspaces[*]}
-do
+for i in ${!workspaces[*]}; do
     sleep 0.5
-    bash "/home/svovoniks/.config/i3/scripts/workspaces/${workspaces[${i}]}"
+    bash "$HOME/.config/i3/scripts/workspaces/${workspaces[${i}]}"
 done
 
-for ((i=${#workspace_idxs[@]}-1; i>=0; i--))
-do
+for ((i = ${#workspace_idxs[@]} - 1; i >= 0; i--)); do
     sleep 0.5
     i3-msg "move container to workspace ${workspace_idxs[${i}]}"
 done

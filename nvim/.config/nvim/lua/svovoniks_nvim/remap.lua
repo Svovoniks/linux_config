@@ -30,6 +30,7 @@ vim.keymap.set("n", "<leader>mc", function()
     vim.cmd("edit " .. file_name)
 end, { noremap = true, silent = true })
 
+-- place prackets
 vim.keymap.set("n", "<leader>pb", [[A{<CR>}<Esc>O]])
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
@@ -38,22 +39,18 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("i", "jj", "<Esc>")
 
-vim.keymap.set("i", "<C-s>", [[<Esc>:w<CR>]])
-vim.keymap.set("v", "<C-s>", [[<Esc>:w<CR>]])
-vim.keymap.set("n", "<C-s>", [[<Esc>:w<CR>]])
-vim.keymap.set("x", "<C-s>", [[<Esc>:w<CR>]])
+vim.keymap.set("i", "<leader>sf", [[<Esc>:w<CR>]])
+vim.keymap.set("v", "<leader>sf", [[<Esc>:w<CR>]])
+vim.keymap.set("n", "<leader>sf", [[<Esc>:w<CR>]])
+vim.keymap.set("x", "<leader>sf", [[<Esc>:w<CR>]])
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<F2>",
     [[:lua os.execute(string.format('GNOME_TERMINAL_SCREEN=""; i3-sensible-terminal -e "cd %s; exec zsh" &', vim.fn.expand('%:h'))) <CR>]])
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
--- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
--- vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>cprev<CR>zz")
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>ss", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>n", [[:e %:h/<C-r><C-w>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 

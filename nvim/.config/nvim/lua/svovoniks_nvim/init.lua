@@ -1,23 +1,25 @@
-require("theprimeagen.set")
-require("theprimeagen.remap")
-require("theprimeagen.lazy_init")
+require("svovoniks_nvim.set")
+require("svovoniks_nvim.remap")
+require("svovoniks_nvim.lazy_init")
 
 local augroup = vim.api.nvim_create_augroup
-local ThePrimeagenGroup = augroup('ThePrimeagen', {})
+local SvovoGroup = augroup('svovoniks', {})
+local yank_group = augroup('HighlightYank', {})
 
 local autocmd = vim.api.nvim_create_autocmd
-local yank_group = augroup('HighlightYank', {})
 
 function R(name)
     require("plenary.reload").reload_module(name)
 end
 
+--  i assume this is for golang html tamplates
 vim.filetype.add({
     extension = {
         templ = 'templ',
     }
 })
 
+-- this highlights selected text
 autocmd('TextYankPost', {
     group = yank_group,
     pattern = '*',
@@ -29,19 +31,23 @@ autocmd('TextYankPost', {
     end,
 })
 
+-- removes trailing whitespaces before saving file
 autocmd({ "BufWritePre" }, {
-    group = ThePrimeagenGroup,
+    group = SvovoGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
 
+
 autocmd('LspAttach', {
-    group = ThePrimeagenGroup,
+    group = SvovoGroup,
     callback = function(e)
         local opts = { buffer = e.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
         vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+        -- serach for symbol in workspace like a function or a variable name
         vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+        -- show diagonstics the line under the curson
         vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
         vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
         vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 tmux kill-server
 bash /home/svovoniks/.dotfiles/i3/.config/i3/scripts/workspace_starter

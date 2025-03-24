@@ -3,10 +3,8 @@
 # these tmux sessions will be initialized on startup
 sessions=("main" "config" "quick_control" "terminal" "notes")
 
-for i in ${!sessions[*]}
-do
-    tmux has-session -t ${sessions[${i}]} 2>/dev/null
-    if [[ $? != 0 ]]; then
-        bash "/home/svovoniks/.dotfiles/i3/.config/i3/scripts/tmux_sessions/${sessions[${i}]}"
+for i in ${!sessions[*]}; do
+    if ! tmux has-session -t "${sessions[${i}]}" 2>/dev/null; then
+        bash "$HOME/.dotfiles/i3/.config/i3/scripts/tmux_sessions/${sessions[${i}]}"
     fi
 done

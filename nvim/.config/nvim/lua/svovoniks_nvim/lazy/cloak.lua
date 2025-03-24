@@ -1,3 +1,4 @@
+-- hides passwords in .env files
 return {
     "laytan/cloak.nvim",
     config = function()

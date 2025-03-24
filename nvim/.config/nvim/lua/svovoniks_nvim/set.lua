@@ -1,8 +1,11 @@
 vim.opt.guicursor = ""
 
+-- current line number
 vim.opt.nu = true
+
 vim.opt.relativenumber = true
 
+--  makes sure all indentation is in spaces (4 spaces = 1 tab)
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -18,6 +21,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
+-- search updates as you type
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true

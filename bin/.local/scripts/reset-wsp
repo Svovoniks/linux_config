@@ -1,5 +1,3 @@
 #!/bin/bash
 
-GNOME_TERMINAL_SCREEN=""
-
 i3-sensible-terminal -e "reset-wsp-internal"

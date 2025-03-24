@@ -30,6 +30,6 @@ return {
         vim.keymap.set('n', '<leader>phs', function()
             builtin.grep_string({ search = vim.fn.input("Grep > "), additional_args = { "--hidden" }, })
         end)
-        vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
+        vim.keymap.set('n', '<leader>sh', builtin.help_tags, {})
     end
 }
