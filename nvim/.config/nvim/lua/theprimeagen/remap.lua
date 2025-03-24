@@ -77,5 +77,7 @@ local function toggle_hlsearch()
     end
 end
 
+-- fun animation
+vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader>hs", toggle_hlsearch, { desc = "Toggle hlsearch" })
 vim.keymap.set("n", "<leader>mm", [[`]], { desc = "Marker" })
