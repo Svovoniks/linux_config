@@ -171,6 +171,7 @@ bar {
 # ------------------------------------------
 # CUSTOM KEYS START
 # ------------------------------------------
+exec --no-startup-id nm-applet
 
 # Suspend
 bindsym $mod+Shift+period exec shutdown now

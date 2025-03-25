@@ -14,14 +14,24 @@ general {
 order += "disk /"
 order += "battery all"
 order += "load"
-order += "tztime local"
+order += "tztime word"
+order += "tztime digit"
+order += "tztime time"
 
 battery all {
         format = "%status %percentage %remaining"
 }
 
-tztime local {
-        format = "%A %Y-%m-%d %H:%M:%S"
+tztime word {
+        format = "%B %d %A"
+}
+
+tztime digit {
+        format = "%Y-%m-%d"
+}
+
+tztime time {
+        format = "%H:%M:%S"
 }
 
 load {
