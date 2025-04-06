@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-STOW_FOLDERS="bin,i3,nvim,tmux,zsh,regolith3,wallpapers,svovo_sys,kitty"
+STOW_FOLDERS="bin,i3,nvim,tmux,zsh,regolith3,wallpapers,svovo_sys"
 
 DOTFILES=$HOME/.dotfiles
 
