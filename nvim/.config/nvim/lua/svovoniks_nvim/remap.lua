@@ -49,6 +49,7 @@ vim.keymap.set("n", "<F2>",
     [[:lua os.execute(string.format('GNOME_TERMINAL_SCREEN=""; i3-sensible-terminal -e "cd %s; exec zsh" &', vim.fn.expand('%:h'))) <CR>]])
 
 vim.keymap.set("n", "<leader>j", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<leader>k", "<cmd>cprev<CR>zz")
 
 vim.keymap.set("n", "<leader>ss", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>n", [[:e %:h/<C-r><C-w>]])
@@ -73,6 +74,11 @@ local function toggle_hlsearch()
         print("hls: OFF")
     end
 end
+
+
+vim.keymap.set('n', '<leader>f', function()
+    vim.lsp.buf.format()
+end, { noremap = true, silent = true })
 
 -- fun animation
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");

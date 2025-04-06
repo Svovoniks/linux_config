@@ -38,7 +38,7 @@ works with:
  - maybe more...
 
 # nmap
- - list all devices on the network: "nmap -sn 192.168.1.0/24"
+ - list all devices on the network: "nmap -sn 192.168.88.0/24"
 
 ------------------       End       ------------------
 
@@ -80,6 +80,7 @@ to add app to dmenu create .deskop file in this location:
 
 # deb package
 dpkg -i package
+dpkg -r package
 
 # screenshot
  - Ctrl+Shift+Print: select area screenshot to clipboard
@@ -131,6 +132,7 @@ actions:
  - list all background jobs - "jobs -l"
  - bring job back to foreground - "fg %<job number>"
  - continue executing job in the background - "bg %<job number>"
+ - kill job - "kill %<job number>"
 
 # grep
  - use -v to exclude pattern

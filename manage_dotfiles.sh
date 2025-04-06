@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-STOW_FOLDERS="bin,i3,nvim,tmux,zsh,regolith3,wallpapers,svovo_sys"
+STOW_FOLDERS="bin,i3,nvim,tmux,zsh,regolith3,wallpapers,svovo_sys,kitty"
 
 DOTFILES=$HOME/.dotfiles
 
@@ -10,7 +10,7 @@ else
     echo "Choose action:"
     echo "  1: stow files"
     echo "  2: to unstow files:"
-    read -r -p "Cooose:" action
+    read "action?Cooose: "
 fi
 
 if [[ "$action" == "1" ]]; then

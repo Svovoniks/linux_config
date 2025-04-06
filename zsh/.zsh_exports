@@ -25,3 +25,5 @@ export N_PREFIX="$HOME/.local/n"
 export DOTFILES=$HOME/.dotfiles
 
 export PATH="$HOME/apps/flutter/bin:$PATH"
+
+export TERMINAL="$HOME/apps/kitty/bin/kitty"

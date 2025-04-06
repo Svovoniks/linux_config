@@ -30,7 +30,7 @@ return {
             filetypes = { "c", "cpp", "objc", "objcpp", "opencl" },
             root_dir = function(fname)
                 return util.root_pattern("compile_commands.json", "compile_flags.txt", ".git")(fname)
-                    or util.find_git_ancestor(fname)
+                    or vim.fs.dirname(vim.fs.find('.git', { path = fname, upward = true })[1])
                     or vim.fn.getcwd()
             end,
             clang = {
@@ -42,6 +42,7 @@ return {
         require("fidget").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
+            automatic_installation = {},
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
@@ -95,7 +96,7 @@ return {
                             Lua = {
                                 runtime = { version = "Lua 5.1" },
                                 diagnostics = {
-                                    globals = { "bit", "vim", "it", "describe", "before_each", "after_each" },
+                                    globals = { "bit", "vim", "it", "describe", "before_each", "after_each", "require" },
                                 }
                             }
                         }
@@ -117,6 +118,8 @@ return {
                 completion = cmp.config.window.bordered({ border = "none" }),
                 documentation = cmp.config.window.bordered({ border = "none" }),
             },
+
+
             mapping = cmp.mapping.preset.insert({
                 ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
