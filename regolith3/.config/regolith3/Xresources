@@ -1,2 +1,2 @@
 gnome.terminal.update: false
-regolith.wallpaper.file: $HOME/.config/wallpapers/wallpaper.jpg
+regolith.wallpaper.file: ~/.config/wallpapers/wallpaper.jpg
